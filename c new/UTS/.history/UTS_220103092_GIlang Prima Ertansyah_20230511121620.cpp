@@ -1,0 +1,86 @@
+#include <stdio.h>
+using namespace std;
+
+int main() {
+    int arr[] = {50, 32, 54, 12, 95, 31, 11, 91};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    int i, index, j;
+
+    printf("UTS Pemrograman C\n");
+    printf("================================================\n");
+    printf("Nama: Gilang prima Ertansyah\n");
+    printf("NIM: 220103092\n");
+    printf("================================================\n");
+    printf("\n\n");
+
+    // Input array
+    printf("Data array:\n");
+    for (i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    printf("\n\n");
+
+    // Shell Sort
+    int gap, temp;
+    for (gap = n / 2; gap > 0; gap /= 2) {
+        for (i = gap; i < n; i++) {
+            temp = arr[i];
+            for (int j = i; j >= gap && arr[j - gap] > temp; j -= gap) {
+                arr[j] = arr[j - gap];
+            }
+            arr[j] = temp;
+        }
+    }
+
+    // Sorted array
+    jarak = N / 2;
+    cout<<"\nJarak = "<<jarak;
+    while(jarak >=1)
+    {
+    do
+    {
+      s=0;
+      for(i=0; i<=(N-jarak)-1; i++)
+      {
+      k=i+jarak;
+      if(Nilai[i] > Nilai[k])
+        {
+          temp = Nilai[i];
+          Nilai[i] = Nilai[k];
+          Nilai[k] = temp;
+          s=1;
+          for(l=0; l<N; l++)
+          cout<<setw(4)<<Nilai[i];
+          cout<<"\n\t";
+          extern int getc (FILE *__stream);
+        }
+      }
+    }
+    while(s!=0);
+    jarak /= 2;
+    cout<<"\nJarak= "<<jarak;
+    }
+
+    // Binary Search
+    int low = 0, high = n - 1, key = 29;
+    while (low <= high) {
+        int mid = low + (high - low) / 2;
+        if (arr[mid] == key) {
+            index = mid;
+            break;
+        }
+        else if (arr[mid] > key) {
+            high = mid - 1;
+        }
+        else {
+            low = mid + 1;
+        }
+    }
+    if (low > high) {
+        printf("Angka %d tidak ditemukan dalam array\n", key);
+    }
+    else {
+        printf("Angka %d ditemukan pada index ke-%d dalam array yang telah diurutkan\n", key, index);
+    }
+    return 0;
+}

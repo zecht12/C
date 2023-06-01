@@ -1,0 +1,13 @@
+#include <iostream>
+#include <stack>
+using namespace std;
+
+int main() {
+    int pil;
+    char dt[10];
+    initstate;
+    do{
+        printf("Pilihan dari operasi Stack =\n");
+
+    }
+}
